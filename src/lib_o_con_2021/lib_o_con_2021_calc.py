@@ -333,7 +333,7 @@ def _ooo_dev_debug(methods: Iterable[Tuple[Callable[[Any], Any], str, tuple]]) -
                 select_used_range(doc=doc, sheet=sheet)
             meth(*args)
             # delay to see changes
-            Lo.delay(1_000)
+            Lo.delay(300)
             if meth.__name__ in ("open_csv_file_v1", "open_csv_file_v2", "open_csv_file_v3"):
                 clear_selected_range(sheet)
         # close the document

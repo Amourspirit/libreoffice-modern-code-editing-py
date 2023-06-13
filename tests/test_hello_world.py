@@ -1,9 +1,11 @@
-# import mock
+# region imports
 import pytest
 from ooodev.utils.lo import Lo
 from ooodev.office.write import Write
 from ooodev.utils.gui import GUI
 from src.hello_world import hello_world
+
+# endregion imports
 
 # This is just a sample test to show how to use pytest with LibreOffice
 # For hundreds of examples see: https://github.com/Amourspirit/python_ooo_dev_tools/tree/main/tests
@@ -36,6 +38,7 @@ def test_hello_world(loader, monkeypatch: pytest.MonkeyPatch) -> None:
     cursor = Write.get_cursor(doc)
     cursor.gotoStart(False)
     cursor.gotoEnd(True)
-    assert cursor.getText().getString() == "Hello World"
+    doc_text = cursor.getText().getString()
+    assert doc_text == "Hello World"
 
     Lo.close_doc(doc)
