@@ -11,10 +11,10 @@
     - [Activate Virtual Environment](#activate-virtual-environment)
       - [Install Requirements](#install-requirements)
       - [Install local project](#install-local-project)
-    - [Windows](#windows)
-      - [Activate](#activate)
-      - [Install Requirements](#install-requirements-1)
-      - [Install local project](#install-local-project-1)
+  - [Windows](#windows)
+    - [Activate](#activate)
+    - [Install Requirements](#install-requirements-1)
+    - [Install local project](#install-local-project-1)
   - [Test Environment](#test-environment)
   - [Open in Code Editor](#open-in-code-editor)
     - [Vs Code](#vs-code)
@@ -97,7 +97,7 @@ Similar option as `pip -e .`
 oooenv -e
 ```
 
-### Windows
+## Windows
 
 Python environments for LibreOffice on Windows need to be configured to use LibreOffice Embedded python.
 One of the drawbacks of this is LibreOffice Embedded python has limitations.
@@ -110,7 +110,7 @@ If a pre-configured environment does not work for you then you can follow  the g
 
 After the virtual environment is created then the next steps are to activate and install requirements.
 
-#### Activate
+### Activate
 
 Activate with PowerShell:
 
@@ -124,7 +124,7 @@ Activate with CMD
 .\.venv\Scripts\activate.bat
 ```
 
-#### Install Requirements
+### Install Requirements
 
 It is important that pip be called as a python module in this case.
 
@@ -134,7 +134,7 @@ python -m pip install -r requirements.txt
 
 Installation may take a bit of time.
 
-#### Install local project
+### Install local project
 
 Install local project into virtual environment. This makes it so the test can see the project files when run on the command line.
 Similar option as `pip -e .`
