@@ -35,6 +35,7 @@ SortRange
 
 import itertools
 from typing import TYPE_CHECKING, Callable, Iterable, Tuple, cast, Any
+import uno
 
 if TYPE_CHECKING:
     # anything inside of TYPE_CHECKING block is ignored when script is executed.
@@ -176,9 +177,7 @@ def copy_range_from_file(*args: Any) -> None:
     doc = SF.CreateScriptService("Calc")
     # Reference to the source document
     svc = SF.CreateScriptService("UI")
-    res_path = get_res_path(doc)
-    s_doc = str(Path(res_path, "DataSource.ods"))
-    source_doc = cast(SF.SFDocuments.SF_Calc, svc.GetDocument(s_doc))
+    source_doc = cast(SF.SFDocuments.SF_Calc, svc.GetDocument("DataSource.ods"))
     source_range = source_doc.Range("Sheet1.A1:A5")
     # Pastes the contents into the destination
     doc.CopyToCell(source_range, "A1")
@@ -357,11 +356,11 @@ def _debug_methods() -> None:
         (clear_contents_v3, "Example3", ()),
         (copy_cells_v1, "Example4", ()),
         (copy_cells_v2, "Example4", ()),
-        # (copy_range_from_file, "Example4", ()), # can't be tested here, Opening another LibreOffice document causes a thread issue here.
+        # (copy_range_from_file, "Example4", ()), # requires user input, res/DataSource.ods must be open
         (create_sheet_example, "", ()),  # inserts a sheet
         (copy_sheet_example, "TestSheet", ()),
         (remove_sheet_example, "Copy_TestSheet", ()),
-        # (copy_from_file_example, "", ()), # can't be tested here, Opening another LibreOffice document causes a thread issue here.
+        # (copy_from_file_example, "", ()),
         # (calculate_average, "Example 7", ()),  # requires user input
         (open_csv_file_v1, "Example8", ()),
         (open_csv_file_v2, "Example8", ()),
