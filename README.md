@@ -12,6 +12,7 @@
       - [Install Requirements](#install-requirements)
       - [Install local project](#install-local-project)
   - [Windows](#windows)
+    - [Create Virtual Environment](#create-virtual-environment-1)
     - [Activate](#activate)
     - [Install Requirements](#install-requirements-1)
     - [Install local project](#install-local-project-1)
@@ -102,6 +103,8 @@ oooenv -e
 Python environments for LibreOffice on Windows need to be configured to use LibreOffice Embedded python.
 One of the drawbacks of this is LibreOffice Embedded python has limitations.
 See the guide [Manually Creating a Virtual Environment](https://python-ooo-dev-tools.readthedocs.io/en/latest/guide/virtual_env/windows_manual_venv.html) for more information.
+
+### Create Virtual Environment
 
 The recommended way to set up a python environment for LibreOffice on windows is to use a [Pre-configured virtual environment](https://github.com/Amourspirit/lo-support_file/tree/main/virtual_environments/windows).
 If there is a pre-configured environment that matches your LibreOffice Embedded Python version then the short version of getting started is to extract the pre-configured zip into your current project root and then after activating pip install requirements.txt (`pip install -r requirements.txt`).
