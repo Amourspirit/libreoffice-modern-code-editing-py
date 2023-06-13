@@ -1,0 +1,29 @@
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+markers = [
+    "skip_headless: skips a test in headless mode",
+    "skip_not_headless_os: skips a test in GUI mode for give os"
+]
+
+[tool.ruff]
+extended-select=["ANN", "C4", "N", "SIM", "TCH"]
+ignore=[]
+show-fixes=true
+target="py37"
+
+[tool.pyright]
+pythonVersion = "3.8"
+venvPath = "."
+venv = ".venv"
+include = ["src"]
+exclude = ["tests",
+    "docs",
+    "build",
+    "dist",
+    "cmds",
+    "tmp",
+    "**/__pycache__",
+    ".venv"
+]

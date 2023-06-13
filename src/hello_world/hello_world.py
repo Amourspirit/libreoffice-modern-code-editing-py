@@ -41,6 +41,8 @@ def hello_world(*args: Any) -> None:
 
 g_exportedScripts = (hello_world,)
 
+# everything below is only for debugging outside of LibreOffice.
+
 
 def _ooo_dev_debug(meth: Callable[[Any], Any], *args) -> None:
     """

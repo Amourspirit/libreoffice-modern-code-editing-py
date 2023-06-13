@@ -7,6 +7,8 @@
     },
     "python.languageServer": "Pylance",
     "python.defaultInterpreterPath": "${workspaceRoot}/.venv/Scripts/python",
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
     "autoDocstring.docstringFormat": "google",
     "workbench.colorCustomizations": {
         "[Monokai]": {
@@ -138,10 +140,15 @@
     "cSpell.words": [
         "APSO",
         "Davg",
+        "endregion",
         "ooodev",
         "scriptforge",
+        "soffice",
         "xscript",
         "XSCRIPTCONTEXT"
     ],
-    "iis.configDir": ""
+    "iis.configDir": "",
+    "python.testing.pytestArgs": [
+        "tests"
+    ]
 }

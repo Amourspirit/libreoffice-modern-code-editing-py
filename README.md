@@ -11,6 +11,7 @@ This repository demonstrates how to use a modern IDE to edit LibreOffice Python 
 - IDE installed such as Vs Code
 - Basic knowledge using python macros in LibreOffice
 
+
 ## Set up Environment
 
 This repository is set to use a pip environment.
@@ -19,8 +20,10 @@ See [Virtual Environments Guides](https://python-ooo-dev-tools.readthedocs.io/en
 
 ## Linux/Mac
 
+
 There is a guide, [Manually Creating a Virtual Environment](https://python-ooo-dev-tools.readthedocs.io/en/latest/guide/virtual_env/linux_manual_venv.html) that provides the instructions for setting up a virtual environment in Linux.
 It is recommended to follow this guide, so we will summarize here.
+
 
 ### Prerequisites
 
@@ -62,6 +65,15 @@ Set virtual environment to work with LibreOffice.
 oooenv cmd-link -a
 ```
 
+#### Install local project
+
+Install local project into virtual environment. This makes it so the test can see the project files when run on the command line.
+Similar option as `pip -e .`
+
+```bash
+oooenv -e
+```
+
 ### Windows
 
 Python environments for LibreOffice on Windows need to be configured to use LibreOffice Embedded python.
@@ -72,6 +84,7 @@ The recommended way to set up a python environment for LibreOffice on windows is
 If there is a pre-configured environment that matches your LibreOffice Embedded Python version then the short version of getting started is to extract the pre-configured zip into your current project root and then after activating pip install requirements.txt (`pip install -r requirements.txt`).
 
 If a pre-configured environment does not work for you then you can follow  the guide [Manually Creating a Virtual Environment](https://python-ooo-dev-tools.readthedocs.io/en/latest/guide/virtual_env/windows_manual_venv.html) .
+
 
 After the virtual environment is created then the next steps are to activate and install requirements.
 
@@ -99,6 +112,16 @@ python -m pip install -r requirements.txt
 
 Installation may take a bit of time.
 
+
+#### Install local project
+
+Install local project into virtual environment. This makes it so the test can see the project files when run on the command line.
+Similar option as `pip -e .`
+
+```powershell
+oooenv -e
+```
+
 ## Test Environment
 
 At this point you should be able to run python and import `uno` for a test.
@@ -125,4 +148,7 @@ Start Vs Code:
 From the command prompt you of your project you can type `code .` to start Vs Code in the current directory.
 Alternatively you can start Vs Code normally and open the folder where this repo is stored.
 
-more to come ...
+If you know how to install a profile for VS Code then this link https://gist.github.com/Amourspirit/b44186bc6838702ffb1b21d2e6100748 contains all the settings needed to run these examples.
+
+This section is incomplete.
+More to come ...

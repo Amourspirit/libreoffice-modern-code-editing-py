@@ -279,6 +279,8 @@ g_exportedScripts = (
     open_csv_file_v3,
 )
 
+# everything below is only for debugging outside of LibreOffice.
+
 
 def _ooo_dev_debug(methods: Iterable[Tuple[Callable[[Any], Any], str, tuple]]) -> None:
     """
@@ -307,6 +309,8 @@ def _ooo_dev_debug(methods: Iterable[Tuple[Callable[[Any], Any], str, tuple]]) -
 
     host = "localhost"
     port = 2002
+    # the default ConnectSocket() uses host of localhost and port 2002,
+    # but in this case ScriptForge needs to be instructed where to find LibreOffice connection.
     with Lo.Loader(Lo.ConnectSocket(host=host, port=port)):
         fnm = Path(__file__).parent / "lib_o_con_2021.ods"
         doc = Calc.open_doc(fnm=fnm)
@@ -337,6 +341,8 @@ def _ooo_dev_debug(methods: Iterable[Tuple[Callable[[Any], Any], str, tuple]]) -
 
 
 def _debug_methods() -> None:
+    # these method can be turned on and off for debugging
+    # These are mainly for demonstration purposes. Your code may look different.
     methods = (
         (clear_region_a1, "Example1", ()),
         (create_random_matrix_v1, "Example1", ()),
@@ -365,6 +371,8 @@ def _debug_methods() -> None:
 
 
 if __name__ == "__main__":
-    # only possible in debug mode
-    # LibreOffice will never call this
+    # LibreOffice will never call this.
+    #
+    # running this script in debug mode, in editor such as Vs Code,
+    # will start LibreOffice and run the methods
     _debug_methods()
