@@ -6,7 +6,6 @@
         "editor.formatOnSave": true
     },
     "python.languageServer": "Pylance",
-    "python.defaultInterpreterPath": "${workspaceRoot}/.venv/Scripts/python",
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
     "autoDocstring.docstringFormat": "google",
@@ -25,7 +24,6 @@
         }
     },
     "workbench.colorTheme": "Monokai",
-    "esbonio.sphinx.confDir": "${workspaceFolder}\\docs",
     "spellchecker.ignoreWordsList": [
         "LibreOffice"
     ],
@@ -142,8 +140,10 @@
         "Davg",
         "endregion",
         "ooodev",
+        "oooenv",
         "scriptforge",
         "soffice",
+        "venv",
         "xscript",
         "XSCRIPTCONTEXT"
     ],
