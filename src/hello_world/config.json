@@ -1,0 +1,11 @@
+{
+    "id": "oooscript",
+    "app": "WRITER",
+    "name": "hello_world",
+    "version": "1.0.0",
+    "args": {
+        "src_file": "hello_world.py",
+        "output_name": "hello_world",
+        "single_script": true
+    }
+}

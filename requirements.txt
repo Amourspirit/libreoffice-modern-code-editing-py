@@ -13,3 +13,4 @@ types-scriptforge>=2.0.1
 types-uno-script>=0.1.1
 types-unopy>=1.2.3
 typing_extensions==4.6.3
+oooscript>=1.0.0

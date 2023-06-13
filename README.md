@@ -25,6 +25,9 @@
       - [Linux/Mac](#linuxmac-1)
       - [Running Scripts](#running-scripts)
       - [Running Test in Vs Code](#running-test-in-vs-code)
+  - [Embedding scripts in LibreOffice documents](#embedding-scripts-in-libreoffice-documents)
+  - [Conclusion](#conclusion)
+  - [Links](#links)
 
 
 ## Overview
@@ -229,7 +232,7 @@ The interpreter for windows should be:
 
 The scripts in this project can be run as stand alone scripts, or the scripts can be embedded into a document as well.
 
-With the help of [OOO Development Tools](https://python-ooo-dev-tools.readthedocs.io/en/latest/index.html) (OooDev) Starting LibreOffice automatically and Creating or Opening documents is somewhat straight forward.
+With the help of [OOO Development Tools] (OooDev) Starting LibreOffice automatically and Creating or Opening documents is somewhat straight forward.
 
 The `src/hello_world/hello_world.py` is intended to be a simple example. When Run from python or Vs Code it Opens Writer, creates a new document, writes "Hello World", and then closes Writer.
 
@@ -251,3 +254,55 @@ In the testing Section of Vs Code you can bring up the available test.
 As seen here you can debug the test like any other Python Test.
 
 <https://github.com/Amourspirit/libreoffice-modern-code-editing-py/assets/4193389/8ae434e6-496d-40d9-a2e1-062e05d1bffd>
+
+## Embedding scripts in LibreOffice documents
+
+The scripts in this project can be embedded into LibreOffice documents using a tool called [oooscript](https://pypi.org/project/oooscript/).
+
+The `config.json` files are used by `oooscript` to embed the scripts into LibreOffice documents.
+
+To embed the `hello_world.py` script into a LibreOffice document run the following command:
+
+```bash
+oooscript compile --embed --config "src/hello_world/config.json" --embed-doc "src/hello_world/hello_world.odt"
+```
+
+The `hello_world.py` script will be embedded into the `hello_world.odt` document and the `hello_world.odt` document will be saved as `builld_script/hello_world.odt`.
+
+To embed the `lib_o_con_2021_calc.py` script into a LibreOffice document run the following command:
+
+```bash
+oooscript compile --embed --config "src/lib_o_con_2021/config.json" --embed-doc "src/lib_o_con_2021/lib_o_con_2021.ods"
+```
+
+The `lib_o_con_2021_calc.py` script will be embedded into the `lib_o_con_2021.ods` document and the `lib_o_con_2021.ods` document will be saved as `builld_script/lib_o_con_2021.ods`.
+
+The [LibreOffice Python UNO Examples] project has other examples such as [LibreOffice Calc Sudoku](https://github.com/Amourspirit/python-ooouno-ex/tree/main/ex/calc/sudoku) the use this same method to embed scripts into LibreOffice documents. Also the Sudoku example demonstrates how to have a multi file project. Something that is not inherently supported by LibreOffice Python Macros.
+
+## Conclusion
+
+A much easier workflow is to write your python scripts in a modern IDE and then embed them into LibreOffice documents.
+Or you can write your python scripts in a modern IDE and then run them from the command line and never need to embed them into LibreOffice documents.
+
+Python allows you to use the full power of a modern IDE to write your python scripts that includes type support, debugging, testing and more.
+
+With such powerful tools for python development it is much easier to write and maintain LibreOffice Python scripts now more then ever.
+Python is a great language for LibreOffice scripting and really can help with best practices and maintainability.
+
+Another big advantage of python is is strong support for documenting code. [OOO Development Tools] takes advantage of this by using [Sphinx](https://www.sphinx-doc.org/en/master/) to generate documentation for the LibreOffice Python scripts and has thousands of pages of documentation.
+
+As a matter of fact [OOO Development Tools] is completely written in python and is a great example of how to write python scripts for LibreOffice in the very style this repository is demonstrating.
+
+[Back to top](#libreoffice-python-script-modern-code-editor-examples)
+
+## Links
+
+- [OOO Development Tools]
+- [OooDev Guides]
+- [LibreOffice Python UNO Examples]
+- [oooscript’s documentation]
+
+[LibreOffice Python UNO Examples]:https://github.com/Amourspirit/python-ooouno-ex/tree/main
+[OOO Development Tools]: https://python-ooo-dev-tools.readthedocs.io/en/latest/index.html
+[OooDev Guides]: https://python-ooo-dev-tools.readthedocs.io/en/latest/guide/index.html
+[oooscript’s documentation]: https://oooscript.readthedocs.io/en/latest/
