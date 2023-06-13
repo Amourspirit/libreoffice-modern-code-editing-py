@@ -169,10 +169,9 @@ To exit Python console just type `exit()` and press the enter key.
 ### Vs Code
 
 Start Vs Code:
+
 From the command prompt you of your project you can type `code .` to start Vs Code in the current directory.
 Alternatively you can start Vs Code normally and open the folder where this repo is stored.
-
-If you know how to install a profile for VS Code then this link <https://gist.github.com/Amourspirit/b44186bc6838702ffb1b21d2e6100748> contains all the settings needed to run these examples.
 
 #### Install Profile
 
@@ -252,5 +251,3 @@ In the testing Section of Vs Code you can bring up the available test.
 As seen here you can debug the test like any other Python Test.
 
 <https://github.com/Amourspirit/libreoffice-modern-code-editing-py/assets/4193389/8ae434e6-496d-40d9-a2e1-062e05d1bffd>
-
-More to come ...
