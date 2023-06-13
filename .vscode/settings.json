@@ -141,6 +141,8 @@
         "endregion",
         "ooodev",
         "oooenv",
+        "oooscript",
+        "pytest",
         "scriptforge",
         "soffice",
         "venv",
