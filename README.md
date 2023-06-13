@@ -6,15 +6,15 @@
     - [Prerequisites](#prerequisites)
   - [Set up Environment](#set-up-environment)
   - [Linux/Mac](#linuxmac)
-    - [Linux/Mac Prerequisites](#linuxmac-prerequisites)
-    - [Linux/Mac Create Virtual Environment](#linuxmac-create-virtual-environment)
-    - [Linux/Mac Activate Virtual Environment](#linuxmac-activate-virtual-environment)
-      - [Linux/Mac Install Requirements](#linuxmac-install-requirements)
+    - [Prerequisites](#prerequisites-1)
+    - [Create Virtual Environment](#create-virtual-environment)
+    - [Activate Virtual Environment](#activate-virtual-environment)
+      - [Install Requirements](#install-requirements)
       - [Install local project](#install-local-project)
     - [Windows](#windows)
       - [Activate](#activate)
-      - [Windows Install Requirements](#windows-install-requirements)
-      - [Windows Install local project](#windows-install-local-project)
+      - [Install Requirements](#install-requirements-1)
+      - [Install local project](#install-local-project-1)
   - [Test Environment](#test-environment)
   - [Open in Code Editor](#open-in-code-editor)
     - [Vs Code](#vs-code)
@@ -48,7 +48,7 @@ See [Virtual Environments Guides](https://python-ooo-dev-tools.readthedocs.io/en
 There is a guide, [Manually Creating a Virtual Environment](https://python-ooo-dev-tools.readthedocs.io/en/latest/guide/virtual_env/linux_manual_venv.html) that provides the instructions for setting up a virtual environment in Linux.
 It is recommended to follow this guide, so we will summarize here.
 
-### Linux/Mac Prerequisites
+### Prerequisites
 
 The `libreoffice-script-provider-python` apt package must be installed. This package allows scripts to connect to LibreOffice.
 
@@ -56,7 +56,7 @@ The `libreoffice-script-provider-python` apt package must be installed. This pac
 sudo apt install libreoffice-script-provider-python
 ```
 
-### Linux/Mac Create Virtual Environment
+### Create Virtual Environment
 
 In your project folder run the following command.
 
@@ -64,7 +64,7 @@ In your project folder run the following command.
 /usr/bin/python3 -m venv .venv
 ```
 
-### Linux/Mac Activate Virtual Environment
+### Activate Virtual Environment
 
 Activate the virtual environment.
 
@@ -72,7 +72,7 @@ Activate the virtual environment.
 source .venv/bin/activate
 ```
 
-#### Linux/Mac Install Requirements
+#### Install Requirements
 
 It is important that pip be called as a python module in this case.
 
@@ -124,7 +124,7 @@ Activate with CMD
 .\.venv\Scripts\activate.bat
 ```
 
-#### Windows Install Requirements
+#### Install Requirements
 
 It is important that pip be called as a python module in this case.
 
@@ -134,7 +134,7 @@ python -m pip install -r requirements.txt
 
 Installation may take a bit of time.
 
-#### Windows Install local project
+#### Install local project
 
 Install local project into virtual environment. This makes it so the test can see the project files when run on the command line.
 Similar option as `pip -e .`
