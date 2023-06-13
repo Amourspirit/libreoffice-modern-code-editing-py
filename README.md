@@ -267,7 +267,7 @@ To embed the `hello_world.py` script into a LibreOffice document run the followi
 oooscript compile --embed --config "src/hello_world/config.json" --embed-doc "src/hello_world/hello_world.odt"
 ```
 
-The `hello_world.py` script will be embedded into the `hello_world.odt` document and the `hello_world.odt` document will be saved as `builld_script/hello_world.odt`.
+The `hello_world.py` script will be embedded into the `hello_world.odt` document and the `hello_world.odt` document will be saved as `build_script/hello_world.odt`.
 
 To embed the `lib_o_con_2021_calc.py` script into a LibreOffice document run the following command:
 
@@ -275,7 +275,7 @@ To embed the `lib_o_con_2021_calc.py` script into a LibreOffice document run the
 oooscript compile --embed --config "src/lib_o_con_2021/config.json" --embed-doc "src/lib_o_con_2021/lib_o_con_2021.ods"
 ```
 
-The `lib_o_con_2021_calc.py` script will be embedded into the `lib_o_con_2021.ods` document and the `lib_o_con_2021.ods` document will be saved as `builld_script/lib_o_con_2021.ods`.
+The `lib_o_con_2021_calc.py` script will be embedded into the `lib_o_con_2021.ods` document and the `lib_o_con_2021.ods` document will be saved as `build_script/lib_o_con_2021.ods`.
 
 The [LibreOffice Python UNO Examples] project has other examples such as [LibreOffice Calc Sudoku](https://github.com/Amourspirit/python-ooouno-ex/tree/main/ex/calc/sudoku) the use this same method to embed scripts into LibreOffice documents. Also the Sudoku example demonstrates how to have a multi file project. Something that is not inherently supported by LibreOffice Python Macros.
 
