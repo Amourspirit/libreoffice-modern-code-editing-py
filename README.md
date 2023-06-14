@@ -95,7 +95,7 @@ oooenv cmd-link -a
 #### Install local project
 
 Install local project into virtual environment. This makes it so the test can see the project files when run on the command line.
-Similar option as `pip -e .`
+Similar option as `pip install -e .`
 
 ```bash
 oooenv -e
@@ -143,7 +143,7 @@ Installation may take a bit of time.
 ### Install local project
 
 Install local project into virtual environment. This makes it so the test can see the project files when run on the command line.
-Similar option as `pip -e .`
+Similar option as `pip install -e .`
 
 ```powershell
 oooenv -e
