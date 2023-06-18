@@ -35,10 +35,10 @@ description = "Demonstrates LibreOffice Modern Day Development Concepts"
 authors = [":Barry-Thomas-Paul: Moss"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "libreoffice_modern_code_editing_py"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+types-uno-script = "^0.1.1"
 
 
 [build-system]

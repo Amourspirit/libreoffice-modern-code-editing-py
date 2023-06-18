@@ -4,7 +4,10 @@
 	"name": "Custom LibreOffice",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	// "image": "mcr.microsoft.com/devcontainers/python:0-3.11"
-	"image": "dockdock/libreoffice73pyenvpoetry:lo-7.5.3-RELEASE",
+	// "image": "dockdock/libreoffice73pyenvpoetry:lo-7.5.3-RELEASE",
+	"build":{
+		"dockerfile": "Dockerfile"
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -14,7 +17,10 @@
 				"maptz.regionfolder"
 			]
 		}
-	},
+	}
+	// "containerEnv": {
+	// 	"PYTHONPATH": "/workspaces/libreoffice-modern-code-editing-py"
+	// },
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -30,5 +36,14 @@
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
-	"postCreateCommand": "git config --global --add safe.directory '*'"
+	// "postCreateCommand": "export PYTHONPATH=$(pwd)",
+	// "postStartCommand": [
+	// 	// "if [ -d \"$PWD/.venv\" ]; then rm -Rf \"$PWD/.venv\"; fi",
+	// 	// "if [ -d .venv ]; then poetry env use $(pwd)/.venv/bin/python; fi",
+	// 	// "&& if [ -d .venv ]; then poetry env use $(pwd)/.venv/bin/python; fi",
+	// 	"poetry config virtualenvs.in-project true",
+	// 	// "&& poetry install",
+	// 	// "&& poetry env use \"$PWD/.venv\"",
+	// 	"&& git config --global --add safe.directory '*'"
+	// ]
 }
