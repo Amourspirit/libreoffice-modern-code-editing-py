@@ -27,3 +27,20 @@ exclude = ["tests",
     "**/__pycache__",
     ".venv"
 ]
+
+[tool.poetry]
+name = "libreoffice-modern-code-editing-py"
+version = "0.1.0"
+description = "Demonstrates LibreOffice Modern Day Development Concepts"
+authors = [":Barry-Thomas-Paul: Moss"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "libreoffice_modern_code_editing_py"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
