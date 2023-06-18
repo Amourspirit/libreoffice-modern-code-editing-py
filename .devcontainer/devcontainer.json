@@ -17,7 +17,7 @@
 				"maptz.regionfolder"
 			]
 		}
-	}
+	},
 	// "containerEnv": {
 	// 	"PYTHONPATH": "/workspaces/libreoffice-modern-code-editing-py"
 	// },
@@ -46,4 +46,5 @@
 	// 	// "&& poetry env use \"$PWD/.venv\"",
 	// 	"&& git config --global --add safe.directory '*'"
 	// ]
+	"postStartCommand": "poetry env info && echo \"All done\""
 }
